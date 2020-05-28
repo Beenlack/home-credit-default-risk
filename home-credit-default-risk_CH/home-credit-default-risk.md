@@ -4,7 +4,7 @@
 ### 1.1. 项目背景
 比赛由 Kaggle 举办，要求选手依据客户的信用卡信息，分期付款信息，信用局信息等为 Home Credit 预测客户贷款是否会违约。比赛原始地址为：https://www.kaggle.com/c/home-credit-default-risk?rvi=1 。在 Home Credit 提供的数据集及其关系如下图。
 
-![Data_Structure.png](attachment:Data_Structure.png)
+![Data_Structure.png](Data_Structure.png)
 <center>图1.1 数据关系表</center>
 
 其中，

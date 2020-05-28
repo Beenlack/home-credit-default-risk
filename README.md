@@ -9,7 +9,7 @@ The process of this project is shown as below:
 *	Designed the feature engineering to depict the portrait of default clients, based on exploration analysis and business understanding. Created the predictive model with the feature engineering.
 *	Achieved top 15% in the ranking. Private Score is 0.77294, while public Score is 0.77593.
 
-In the code list, The complete data analysis report is record in the .html file, 'home-credit-default-risk_CH.html'（Chinese version）. Also, you can find the online preview in 'home-credit-default-risk.md' in the 'home-credit-default-risk_CH' folder. The English version is coming soon.
+In the code list, The complete data analysis report is record in the .html file, 'home-credit-default-risk_CH.html'（Chinese version）. Also, you can find the online preview in 'preview.md' in the 'home-credit-default-risk_CH' folder. The English version is coming soon.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -25,4 +25,4 @@ Home Credit 信用卡货款违约
 * 通过可视化发现和业务理解构造相应特征工程刻画违约用户画像；
 * 最后进行建模预测。在排行榜上取得了top15%的成绩。Private Score 为 0.77294，public Score 为 0.77593。
 
-在代码列表中，完整的数据分析报告记录在html文件 ‘home-credit-default-risk_CH.html’（中文版本）中。 另外，您可以在 ‘home-credit-default-risk_CH’ 文件夹中的 ‘home-credit-default-risk.md’ 中找到在线预览。 英文版即将推出。
+在代码列表中，完整的数据分析报告记录在html文件 ‘home-credit-default-risk_CH.html’（中文版本）中。 另外，您可以在 ‘home-credit-default-risk_CH’ 文件夹中的 ‘preview.md’ 中找到在线预览。 英文版即将推出。

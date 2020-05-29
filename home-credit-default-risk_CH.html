@@ -17106,7 +17106,7 @@ Mix model metrics
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>从上图可以看出，在新的预测模型中，判断申请者是否违约的主要特征仍然为申请者的职业（<code>'ORGANIZATION_TYPE'</code>）以及其还款周期（<code>'CREDIT_TERM'</code>）。在特征重要性排名的前十名中，出现了<code>'app_pre_CNT_PAYMENT_mean'</code>，这个特征来自过往货款记录，表示：“在过往货款记录的信息，货款的平均期限”。我们在这猜测其在业务上的介绍是，过往能货款期限越长，代表其信用约好，违约率将越小。可用前面建立的<code>explore_numeric</code>函数进行研究。在以0.5为分界对模型预测的结果进行二分处理，得到预测结果。</p>
+<p>从上图可以看出，在新的预测模型中，判断申请者是否违约的主要特征仍然为申请者的职业（<code>'ORGANIZATION_TYPE'</code>）以及其还款周期（<code>'CREDIT_TERM'</code>）。在特征重要性排名的前十名中，出现了<code>'app_pre_CNT_PAYMENT_mean'</code>，这个特征来自过往货款记录，表示：“在过往货款记录的信息，货款的平均期限”。我们在这猜测其在业务上的介绍是，过往能货款期限越长，代表其信用约好，违约率将越小。可用前面建立的<code>explore_numeric</code>函数进行研究。最后，部分预测结果如下。</p>
 
 </div>
 </div>

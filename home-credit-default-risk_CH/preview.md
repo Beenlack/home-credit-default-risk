@@ -4,7 +4,7 @@
 ### 1.1. 项目背景
 比赛由 Kaggle 举办，要求选手依据客户的信用卡信息，分期付款信息，信用局信息等为 Home Credit 预测客户贷款是否会违约。比赛原始地址为：https://www.kaggle.com/c/home-credit-default-risk?rvi=1 。在 Home Credit 提供的数据集及其关系如下图。
 
-![Data_Structure.png](Data_Structure.png)
+![Data_Structure.png](attachment:Data_Structure.png)
 <center>图1.1 数据关系表</center>
 
 其中，
@@ -57,7 +57,8 @@ app_pre_dat = pd.read_csv('previous_application.csv')
 
 
 ```python
-# Inspect data
+## Inspect data
+# Application train
 app_train_dat.info()
 app_train_dat.shape
 ```
@@ -78,6 +79,7 @@ app_train_dat.shape
 
 
 ```python
+# Application test
 app_test_dat.info()
 app_test_dat.shape
 ```
@@ -98,6 +100,7 @@ app_test_dat.shape
 
 
 ```python
+# Application train columns
 app_train_dat.columns
 ```
 
@@ -119,6 +122,7 @@ app_train_dat.columns
 
 
 ```python
+# Application test columns
 app_test_dat.columns
 ```
 
@@ -140,6 +144,7 @@ app_test_dat.columns
 
 
 ```python
+# Application train head
 app_train_dat.head()
 ```
 
@@ -317,6 +322,7 @@ app_train_dat.head()
 
 
 ```python
+# Application test head
 app_test_dat.head()
 ```
 
@@ -609,7 +615,11 @@ def missing_values_check(df):
     
     # Sort the value by decrease and Print the values
     return df_mis.sort_values('Missing Value count', ascending=False)
+```
 
+
+```python
+# Missing values in Application train
 missing_values_check(app_train_dat).head(20)
 ```
 
@@ -752,6 +762,7 @@ missing_values_check(app_train_dat).head(20)
 
 
 ```python
+# Missing values in Application test
 missing_values_check(app_test_dat).head(20)
 ```
 
@@ -993,7 +1004,7 @@ explore_object(app_train_dat, 'NAME_CONTRACT_TYPE')
 ```
 
 
-![png](output_20_0.png)
+![png](output_21_0.png)
 
 
     Number of contracts
@@ -1022,7 +1033,7 @@ explore_object(app_train_dat, 'CODE_GENDER')
 ```
 
 
-![png](output_22_0.png)
+![png](output_23_0.png)
 
 
     Number of contracts
@@ -1050,7 +1061,7 @@ explore_numeric(app_train_dat, 'DAYS_BIRTH', date_transfer=True)
 ```
 
 
-![png](output_24_0.png)
+![png](output_25_0.png)
 
 
     The correlation between DAYS_BIRTH and the TARGET is 0.0782
@@ -1067,7 +1078,7 @@ explore_object(app_train_dat, 'NAME_EDUCATION_TYPE')
 ```
 
 
-![png](output_26_0.png)
+![png](output_27_0.png)
 
 
     Number of contracts
@@ -1099,7 +1110,7 @@ explore_object(app_train_dat, 'NAME_FAMILY_STATUS', label_rotation=True)
 ```
 
 
-![png](output_28_0.png)
+![png](output_29_0.png)
 
 
     Number of contracts
@@ -1133,7 +1144,7 @@ explore_object(app_train_dat, 'CNT_CHILDREN')
 ```
 
 
-![png](output_30_0.png)
+![png](output_31_0.png)
 
 
     Number of contracts
@@ -1191,7 +1202,7 @@ explore_numeric(app_train_dat, 'DAYS_EMPLOYED', date_transfer=True)
 ```
 
 
-![png](output_32_0.png)
+![png](output_33_0.png)
 
 
     The correlation between DAYS_EMPLOYED and the TARGET is -0.0449
@@ -1200,7 +1211,7 @@ explore_numeric(app_train_dat, 'DAYS_EMPLOYED', date_transfer=True)
 
 
 
-![png](output_32_2.png)
+![png](output_33_2.png)
 
 
     The correlation between DAYS_EMPLOYED and the TARGET is 0.0750
@@ -1217,7 +1228,7 @@ explore_object(app_train_dat, 'NAME_INCOME_TYPE',horizontal_layout=False)
 ```
 
 
-![png](output_34_0.png)
+![png](output_35_0.png)
 
 
     Number of contracts
@@ -1255,7 +1266,7 @@ explore_object(app_train_dat, 'OCCUPATION_TYPE', label_rotation=True, horizontal
 ```
 
 
-![png](output_36_0.png)
+![png](output_37_0.png)
 
 
     Number of contracts
@@ -1316,7 +1327,7 @@ explore_object(app_train_dat, 'FLAG_OWN_CAR')
 ```
 
 
-![png](output_38_0.png)
+![png](output_39_0.png)
 
 
     Number of contracts
@@ -1340,7 +1351,7 @@ explore_object(app_train_dat, 'FLAG_OWN_REALTY')
 ```
 
 
-![png](output_39_0.png)
+![png](output_40_0.png)
 
 
     Number of contracts
@@ -1424,7 +1435,7 @@ explore_object(app_train, 'HAS_HOUSE_INFORMATION')
 ```
 
 
-![png](output_41_0.png)
+![png](output_42_0.png)
 
 
     The correlation between INCOME_PER_CHILD and the TARGET is -0.0045
@@ -1433,7 +1444,7 @@ explore_object(app_train, 'HAS_HOUSE_INFORMATION')
 
 
 
-![png](output_41_2.png)
+![png](output_42_2.png)
 
 
     The correlation between DAYS_EMPLOYED_PERCENT and the TARGET is -0.0680
@@ -1442,7 +1453,7 @@ explore_object(app_train, 'HAS_HOUSE_INFORMATION')
 
 
 
-![png](output_41_4.png)
+![png](output_42_4.png)
 
 
     The correlation between CREDIT_INCOME_PERCENT and the TARGET is -0.0077
@@ -1451,7 +1462,7 @@ explore_object(app_train, 'HAS_HOUSE_INFORMATION')
 
 
 
-![png](output_41_6.png)
+![png](output_42_6.png)
 
 
     The correlation between ANNUITY_INCOME_PERCENT and the TARGET is 0.0143
@@ -1460,7 +1471,7 @@ explore_object(app_train, 'HAS_HOUSE_INFORMATION')
 
 
 
-![png](output_41_8.png)
+![png](output_42_8.png)
 
 
     The correlation between CREDIT_TERM and the TARGET is 0.0127
@@ -1469,7 +1480,7 @@ explore_object(app_train, 'HAS_HOUSE_INFORMATION')
 
 
 
-![png](output_41_10.png)
+![png](output_42_10.png)
 
 
     Number of contracts
@@ -1673,10 +1684,7 @@ def model(train_dataset, test_dataset, encoding = 'ohe', n_folds = 5):
 ```python
 # Create the baseline model
 seed = 8
-base_submission, base_fi, base_metrics = model(app_train, app_test, encoding = 'le')
-print('Baseline metrics')
-print(base_metrics)
-gc.collect
+base_submission, base_fi, base_metrics = model(app_train, app_test, encoding='le')
 ```
 
     Training Data Shape:  (307511, 126)
@@ -1737,6 +1745,15 @@ gc.collect
     [400]	train's auc: 0.845285	train's binary_logloss: 0.500396	valid's auc: 0.763443	valid's binary_logloss: 0.534614
     Early stopping, best iteration is:
     [357]	train's auc: 0.839246	train's binary_logloss: 0.506771	valid's auc: 0.763768	valid's binary_logloss: 0.538476
+
+
+
+```python
+print('Baseline metrics')
+print(base_metrics)
+gc.collect
+```
+
     Baseline metrics
           fold     train     valid
     0        0  0.819494  0.761634
@@ -1791,7 +1808,7 @@ base_fi_sorted = feature_importances_fig(base_fi)
 ```
 
 
-![png](output_49_0.png)
+![png](output_51_0.png)
 
 
 从上图可以看出，预测模型中，判断申请者是否违约的主要特征为申请者的职业（`'OGRGANIZATION_TYPE'`），紧接着的特征为申请者的贷款的还款周期（`'CREDIT_TERM'`）。
@@ -1858,7 +1875,6 @@ def agg_dataset(df, id_var, df_name):
     ## numeric variable
     group_ids = df[id_var]
     numeric_df = df.select_dtypes('number')
-    numeric_df[id_var] = group_ids
 
     # Group by the specified variable and calculate the statistics
     agg = numeric_df.groupby(id_var).agg(['count', 'mean', 'max', 'min', 'sum'])
@@ -1915,14 +1931,6 @@ bureau = agg_dataset(df=bureau_dat, id_var='SK_ID_CURR', df_name='bureau')
 bureau.reset_index(inplace=True)
 bureau.head()
 ```
-
-    /Users/beenlack/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:12: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      if sys.path[0] == '':
-
 
     (305811, 60)
     (305811, 46)
@@ -2111,14 +2119,6 @@ app_pre.reset_index(inplace=True)
 app_pre.head()
 ```
 
-    /Users/beenlack/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:12: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      if sys.path[0] == '':
-
-
     (338857, 95)
     (338857, 286)
 
@@ -2299,7 +2299,8 @@ app_pre.head()
 
 
 ```python
-# Merget dataset
+## Merget dataset
+# Merget Application train with Bureau and Application pre
 app_train_mix = app_train.merge(bureau, on = 'SK_ID_CURR', how = 'left')
 app_train_mix = app_train_mix.merge(app_pre, on = 'SK_ID_CURR', how = 'left')
 print(app_train_mix.shape)
@@ -2312,6 +2313,7 @@ print(app_train_mix.shape)
 
 
 ```python
+# Merget Application test with Bureau and Application pre
 app_test_mix = app_test.merge(bureau, on = 'SK_ID_CURR', how = 'left')
 app_test_mix = app_test_mix.merge(app_pre, on = 'SK_ID_CURR', how = 'left')
 print(app_test_mix.shape)
@@ -2330,7 +2332,7 @@ explore_numeric(app_train_mix, 'bureau_DAYS_CREDIT_mean')
 ```
 
 
-![png](output_64_0.png)
+![png](output_66_0.png)
 
 
     The correlation between bureau_DAYS_CREDIT_mean and the TARGET is 0.0897
@@ -2412,9 +2414,6 @@ print('Testing Corrs Removed Shape: ', test_corrs_removed.shape)
 ```python
 seed = 8
 mix_submission, mix_fi, mix_metrics = model(train_corrs_removed, test_corrs_removed, encoding='le')
-print('Mix model metrics')
-print(mix_metrics)
-gc.collect
 ```
 
     Training Data Shape:  (307511, 424)
@@ -2479,6 +2478,15 @@ gc.collect
     [400]	train's auc: 0.868033	train's binary_logloss: 0.474603	valid's auc: 0.774209	valid's binary_logloss: 0.513306
     Early stopping, best iteration is:
     [339]	train's auc: 0.857941	train's binary_logloss: 0.485915	valid's auc: 0.774414	valid's binary_logloss: 0.520233
+
+
+
+```python
+print('Mix model metrics')
+print(mix_metrics)
+gc.collect
+```
+
     Mix model metrics
           fold     train     valid
     0        0  0.855641  0.777699
@@ -2504,10 +2512,10 @@ mix_fi_sorted = feature_importances_fig(mix_fi, 30)
 ```
 
 
-![png](output_72_0.png)
+![png](output_75_0.png)
 
 
-从上图可以看出，在新的预测模型中，判断申请者是否违约的主要特征仍然为申请者的职业（`'ORGANIZATION_TYPE'`）以及其还款周期（`'CREDIT_TERM'`）。在特征重要性排名的前十名中，出现了`'app_pre_CNT_PAYMENT_mean'`，这个特征来自过往货款记录，表示：“在过往货款记录的信息，货款的平均期限”。我们在这猜测其在业务上的介绍是，过往能货款期限越长，代表其信用约好，违约率将越小。可用前面建立的`explore_numeric`函数进行研究。在以0.5为分界对模型预测的结果进行二分处理，得到预测结果。
+从上图可以看出，在新的预测模型中，判断申请者是否违约的主要特征仍然为申请者的职业（`'ORGANIZATION_TYPE'`）以及其还款周期（`'CREDIT_TERM'`）。在特征重要性排名的前十名中，出现了`'app_pre_CNT_PAYMENT_mean'`，这个特征来自过往货款记录，表示：“在过往货款记录的信息，货款的平均期限”。我们在这猜测其在业务上的介绍是，过往能货款期限越长，代表其信用约好，违约率将越小。可用前面建立的`explore_numeric`函数进行研究。最后，部分预测结果如下。
 
 
 ```python
@@ -2575,4 +2583,3 @@ mix_submission.head()
 ```python
 
 ```
-

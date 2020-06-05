@@ -4,7 +4,7 @@
 ### 1.1. 项目背景
 比赛由 Kaggle 举办，要求选手依据客户的信用卡信息，分期付款信息，信用局信息等为 Home Credit 预测客户贷款是否会违约。比赛原始地址为：https://www.kaggle.com/c/home-credit-default-risk?rvi=1 。在 Home Credit 提供的数据集及其关系如下图。
 
-![Data_Structure.png](Data_Structure.png)
+![Data_Structure.png](attachment:Data_Structure.png)
 <center>图1.1 数据关系表</center>
 
 其中，
@@ -1074,7 +1074,7 @@ explore_numeric(app_train_dat, 'DAYS_BIRTH', date_transfer=True)
 
 ```python
 #  Exploration analysis with Client's education level
-explore_object(app_train_dat, 'NAME_EDUCATION_TYPE')
+explore_object(app_train_dat, 'NAME_EDUCATION_TYPE',label_rotation=True)
 ```
 
 
@@ -2515,8 +2515,7 @@ mix_fi_sorted = feature_importances_fig(mix_fi, 30)
 ![png](output_75_0.png)
 
 
-
-从上图可以看出，在新的预测模型中，判断申请者是否违约的主要特征仍然为申请者的职业（`'ORGANIZATION_TYPE'`）以及其还款周期（`'CREDIT_TERM'`）。在特征重要性排名的前十名中，出现了`'app_pre_CNT_PAYMENT_mean'`，这个特征来自过往货款记录，表示：“在过往货款记录的信息，货款的平均期限”。我们在这猜测其在业务上的介绍是，过往能货款期限越长，代表其信用约好，违约率将越小。可用前面建立的`explore_numeric`函数进行研究。得到预测结果如下。
+从上图可以看出，在新的预测模型中，判断申请者是否违约的主要特征仍然为申请者的职业（`'ORGANIZATION_TYPE'`）以及其还款周期（`'CREDIT_TERM'`）。在特征重要性排名的前十名中，出现了`'app_pre_CNT_PAYMENT_mean'`，这个特征来自过往货款记录，表示：“在过往货款记录的信息，货款的平均期限”。我们在这猜测其在业务上的介绍是，过往能货款期限越长，代表其信用约好，违约率将越小。可用前面建立的`explore_numeric`函数进行研究。最后，部分预测结果如下。
 
 
 ```python
